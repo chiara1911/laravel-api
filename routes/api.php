@@ -1,8 +1,11 @@
 <?php
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ProjectController;
+use App\Http\Controllers\Api\TechnologyController;
+use App\Http\Controllers\Api\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,3 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/projects', [ProjectController::class,'index']);
 Route::get('/projects/{slug}', [ProjectController::class,'show']);
+Route::get('/technologies', [TechnologyController::class,'index']);
+Route::get('/technologies/{slug}', [TechnologyController::class, 'show']);
+Route::get('/categories', [CategoryController::class,'index']);
+Route::get('/categories{slug}', [CategoryController::class,'show']);
