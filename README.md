@@ -194,7 +194,7 @@ public function index(){
 Route::middleware(['auth', 'verified'])
    ->name('admin.')
    ->prefix('admin')
-   ->group(function () {
+ ->group(function () {
          Route::get('/', [DashboardController::class, 'index'])
          ->name('dashboard');
    });
@@ -226,3 +226,13 @@ $table->dropForeign('projects_user_id_foreign');
             $table->dropColumn('user_id');
 
 ```
+
+<!-- per mettere le api -->
+
+<!-- fare una cartella 'Api' dentro alla cartella Controller -->
+```
+php artisan make:controller Api/ProjectController
+
+```
+
+
