@@ -11,7 +11,7 @@ class TechnologyController extends Controller
     //
     public function index()
     {
-        $technologies = Technology::paginate(3);
+        $technologies = Technology::paginate(6);
         return response()->json(
             [
                 'success' => true,
