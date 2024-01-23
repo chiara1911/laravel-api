@@ -54,7 +54,7 @@ class ProjectController extends Controller
         //aggiungo l'id utente in form data
         $formData['user_id'] = $userId;
         if ($request->hasFile('image')) {
-            $img_path = Storage::put('images', $formData['image']);
+            $img_path = Storage::put('image', $formData['image']);
             $formData['image'] = $img_path;
         }
         // dd($img_path);
@@ -112,7 +112,7 @@ class ProjectController extends Controller
                 Storage::delete($project->image);
             }
 
-            $path = Storage::put('images', $formData['image']);
+            $path = Storage::put('image', $formData['image']);
             $formData['image'] = $path;
         }
         $project->update($formData);

@@ -26,4 +26,4 @@ Route::get('/projects/{slug}', [ProjectController::class,'show']);
 Route::get('/technologies', [TechnologyController::class,'index']);
 Route::get('/technologies/{id}', [TechnologyController::class, 'show']);
 Route::get('/categories', [CategoryController::class,'index']);
-Route::get('/categories{slug}', [CategoryController::class,'show']);
+Route::get('/categories/{slug}', [CategoryController::class,'show']);
