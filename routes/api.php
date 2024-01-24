@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ProjectController;
 use App\Http\Controllers\Api\TechnologyController;
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\LeadController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -27,3 +29,5 @@ Route::get('/technologies', [TechnologyController::class,'index']);
 Route::get('/technologies/{id}', [TechnologyController::class, 'show']);
 Route::get('/categories', [CategoryController::class,'index']);
 Route::get('/categories/{slug}', [CategoryController::class,'show']);
+
+Route::post('contacts', [LeadController::class,'store']);
